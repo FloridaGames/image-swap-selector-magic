@@ -2,7 +2,7 @@ import SelectableImage from "@/components/SelectableImage";
 import { useState } from "react";
 
 const Index = () => {
-  const [imageSrc, setImageSrc] = useState("https://tilburguniversity.instructure.com/courses/21071/files/3773981/preview");
+  const [imageSrc, setImageSrc] = useState("https://dummyimage.com/1230x120/9e9e9e/fff");
 
   const handleImageChange = (newSrc: string) => {
     setImageSrc(newSrc);
@@ -25,6 +25,8 @@ const Index = () => {
             <SelectableImage
               src={imageSrc}
               alt="Homepage-img-2.png"
+              targetWidth={1230}
+              targetHeight={120}
               onImageChange={handleImageChange}
               className="rounded-lg shadow-lg"
             />
